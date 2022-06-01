@@ -1,0 +1,92 @@
+.banner{
+    width: 100%;
+    height: 295px;
+    background-image: url(../assets/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    .bg-banner{
+        margin-top: 15px;
+        display: flex;
+        background-color: rgba(255, 168, 0, 0.59);
+        width: 100%;
+        height: 105px ;
+        justify-content: center;
+        align-items: center;
+        p{
+            text-align: center;
+            font-size: 20px;
+            text-transform: uppercase;
+            font-family: 'Kanit', sans-serif;
+        }
+    }
+}
+.temporada{
+    width: 100%;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Kanit', sans-serif;
+    margin: 35px auto;
+    .temporada--title{
+        margin: 1rem auto;
+        p{
+            text-transform: uppercase;
+        }
+    }
+    .temporada--img{
+        background-image: url(../assets/sale.jpg);
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        .temporada--img__bg{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(58, 58, 56, 0.59);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            p{
+                padding: 25px 0;
+                font-size: 64px;
+                color: #FFC632;
+                text-align: center;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:768px){
+    .banner{
+        height: 600px;
+        .bg-banner{
+            margin-top: 45px;
+            display: flex;
+            background-color: rgba(255, 168, 0, 0.59);
+            p{
+                font-size: 40px;
+            }
+        }
+    }
+    .temporada{
+        height: 620px;
+        margin: 55px auto;
+        .temporada--title{
+            p{
+                font-size: 40px;
+                margin: 15px 0;
+            }
+        }
+        .temporada--img{
+            .temporada--img__bg{
+                background-color: rgba(58, 58, 56, 0.849);
+                p{
+                    font-size: 94px;
+                }
+            }
+        }
+    }
+}

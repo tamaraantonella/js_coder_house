@@ -1,0 +1,119 @@
+.sucursales{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 45px 0;
+    &--title{
+        display: flex;
+        justify-content: center;
+        font-family: 'Kanit', sans-serif;
+        text-transform: uppercase;
+        margin: 15px 0;
+    }
+    &--boxesBox{
+        display: flex;
+        flex-direction: column;
+        .sucursales--bigbox{
+            display: flex;
+            flex-direction: column;
+            .sucursales_title{
+                width: 100%;
+                height: 30px;
+                background-color: #D9D9D9;
+                display: flex;
+                align-items: center;
+                padding-left: 10px;
+                &--text{
+                    background-color: black;
+                    height: 100%;
+                    width: fit-content;
+                    display: flex;
+                    align-items: center;
+                    p{
+                        color: white;
+                        font-family: 'Kanit', sans-serif;
+                        padding: 0 5px;
+                    }
+                }
+            }
+            .sucursales_box{
+                align-self: center;
+                margin: 5px 0;
+                width: 95%;
+                height: 83px;
+                border: 1px solid rgba(255, 124, 50, .24);
+                display: flex;
+                flex-direction: column;
+                font-family: 'Kanit', sans-serif;
+                justify-content: center;
+                padding-left: 10px;
+                .title{
+                    font-weight: 600;
+                    color: black;
+                }
+                p{
+                    color:#8E8E8E;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:768px){
+    .sucursales{
+
+        &--title{
+            p{
+                font-size: 40px;
+            }
+        }
+        &--boxesBox{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-around;
+            gap:15px;
+            .sucursales--bigbox{
+                width: 45%;
+                .sucursales_title{
+                    width: 100%;
+                    height: 30px;
+                    background-color: #D9D9D9;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 10px;
+                    &--text{
+                        background-color: black;
+                        height: 100%;
+                        width: fit-content;
+                        display: flex;
+                        align-items: center;
+                        p{
+                            color: white;
+                            font-family: 'Kanit', sans-serif;
+                            padding: 0 5px;
+                        }
+                    }
+                }
+                .sucursales_box{
+                    align-self: center;
+                    margin: 5px 0;
+                    width: 100%;
+                    height: 83px;
+                    border: 1px solid rgba(255, 124, 50, .24);
+                    display: flex;
+                    flex-direction: column;
+                    font-family: 'Kanit', sans-serif;
+                    justify-content: center;
+                    padding-left: 10px;
+                    .title{
+                        font-weight: 600;
+                        color: black;
+                    }
+                    p{
+                        color:#8E8E8E;
+                    }
+                }
+            }
+        }
+    }
+}
