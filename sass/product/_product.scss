@@ -1,0 +1,15 @@
+.product__main{
+    .main__search{
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        margin: 0 auto;
+        input{
+            width: 100%;
+            border: 1px solid rgba(205, 205, 205, 0.471);
+            height: 20px;
+            border-radius: 20px;
+            padding: 15px;
+        }
+    }
+}

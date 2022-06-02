@@ -13,13 +13,18 @@ header{
     justify-content: space-between;
     align-items: center;
     .logo{
-        width: 60%;
+        width: 50%;
         img{
             width: 200px;
         }
     }
     .icono{
         margin: 0 15px;
+        a{
+            color:black;
+            display: inline-block;
+            margin: 0 5px;
+        }
     }
 
 }

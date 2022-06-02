@@ -13,11 +13,15 @@ header {
   justify-content: space-between;
   align-items: center; }
   header .logo {
-    width: 60%; }
+    width: 50%; }
     header .logo img {
       width: 200px; }
   header .icono {
     margin: 0 15px; }
+    header .icono a {
+      color: black;
+      display: inline-block;
+      margin: 0 5px; }
 
 @media screen and (min-width: 768px) {
   header {
@@ -265,3 +269,15 @@ footer {
     display: flex;
     width: 50%;
     justify-content: space-around; }
+
+.product__main .main__search {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto; }
+  .product__main .main__search input {
+    width: 100%;
+    border: 1px solid rgba(205, 205, 205, 0.471);
+    height: 20px;
+    border-radius: 20px;
+    padding: 15px; }
