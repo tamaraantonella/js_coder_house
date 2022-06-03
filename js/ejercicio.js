@@ -1,12 +1,15 @@
-let confirmacion = prompt('Quieres comprar algo? si/no ');
-if (confirmacion === 'si'){
-    let producto = prompt ('que quieres comprar? zapatos o borcegos?');
-    if (producto === 'zapatos'){
-        console.log('Te salen 2000 pesos');
+
+if (window.confirm("Bienvenido! Quieres comprar algo?")){
+    let producto = prompt ('quieres comprar zapatos o borcegos?');
+    while(producto !== 'zapatos' && producto !== 'borcegos'){
+        producto = prompt('No tenemos entre esas opciones por favor elija entre zapatos o borcegos ')
+    } 
+    if(producto ==='zapatos'){
+        console.log('El total es 2000 pesos');
     } else if (producto === 'borcegos'){
-        console.log('Te salen 5000 pesos');
-    } else {
-        console.log('No tenemos ese producto');
+        console.log('El total es 5000 pesos');
     }
+    
+} else {
+    console.log('Gracias por visitar nuestra tienda');
 }
-if (confirmacion === 'no') console.log('Gracias por visitar nuestra tienda');
