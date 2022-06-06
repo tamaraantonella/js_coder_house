@@ -1,4 +1,4 @@
-
+/*
 if (window.confirm("Bienvenido! Quieres comprar algo?")){
     let producto = prompt ('quieres comprar zapatos o borcegos?');
     while(producto !== 'zapatos' && producto !== 'borcegos'){
@@ -13,3 +13,4 @@ if (window.confirm("Bienvenido! Quieres comprar algo?")){
 } else {
     console.log('Gracias por visitar nuestra tienda');
 }
+*/

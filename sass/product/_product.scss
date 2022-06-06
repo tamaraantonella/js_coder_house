@@ -12,4 +12,44 @@
             padding: 15px;
         }
     }
+    .main__box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        .main__box--title{
+            text-transform: uppercase;
+            font-size: 2rem;
+            font-family: 'Kanit', sans-serif;
+        }
+        .main__box--container{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            align-items: center;
+            .filtros{
+            }
+            .cards-box{
+                display: flex;
+                flex-direction: column;
+                width: 80%;
+                align-items: center;
+                .card{
+                    img{
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                    .card-body{
+                        h5{
+                            text-transform: uppercase;
+                            font-family: 'Kanit', sans-serif;
+                        }
+                    }
+                }
+            }
+        
+
+        }
+
+    }
 }
