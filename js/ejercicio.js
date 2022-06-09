@@ -1,16 +1,33 @@
-/*
-if (window.confirm("Bienvenido! Quieres comprar algo?")){
-    let producto = prompt ('quieres comprar zapatos o borcegos?');
-    while(producto !== 'zapatos' && producto !== 'borcegos'){
-        producto = prompt('No tenemos entre esas opciones por favor elija entre zapatos o borcegos ')
-    } 
-    if(producto ==='zapatos'){
-        console.log('El total es 2000 pesos');
-    } else if (producto === 'borcegos'){
-        console.log('El total es 5000 pesos');
+class Producto {
+    constructor (nombre, color, importe) {
+        this.nombre = nombre;
+        this.color = color;
+        this. precio = importe
     }
-    
-} else {
-    console.log('Gracias por visitar nuestra tienda');
 }
-*/
+const productos =[];
+
+function agregandoProductos() {
+    productos.push(new Producto("borcegos", "negro", 15000))
+    productos.push(new Producto("zapatillas", "negro", 15000))
+    productos.push(new Producto("borcegos", "negro", 15000))
+    productos.push(new Producto("borcegos", "negro", 18000))
+    productos.push(new Producto("zapatillas", "negro", 15000))
+    productos.push(new Producto("botas", "marron", 20000))
+}
+agregandoProductos()
+
+function agregarNuevoProducto(nombre, color, precio){
+    productos.push(new Producto(nombre, color, precio))
+}
+agregarNuevoProducto("zapatillas", "blancas", 12000);
+
+console.table(productos);
+
+// buscar todos los elementos que sean botas
+function buscarElemento() {
+    let busqueda = prompt("Ingrese producto a buscar ");
+    let result = productos.filter(p => p.nombre === busqueda)
+    console.log(result);
+}
+buscarElemento();
