@@ -1,33 +1,38 @@
+const IVA = 1.21;
 class Producto {
     constructor (nombre, color, importe) {
         this.nombre = nombre;
         this.color = color;
-        this. precio = importe
+        this.precio = importe;
+        this.precioSinIva = 0;
+    }
+    precioFinal() {
+        this.precioSinIva = this.precio
+        this.precio = parseFloat((this.precio * IVA))   
     }
 }
 const productos =[];
 
 function agregandoProductos() {
-    productos.push(new Producto("borcegos", "negro", 15000))
-    productos.push(new Producto("zapatillas", "negro", 15000))
-    productos.push(new Producto("borcegos", "negro", 15000))
-    productos.push(new Producto("borcegos", "negro", 18000))
-    productos.push(new Producto("zapatillas", "negro", 15000))
-    productos.push(new Producto("botas", "marron", 20000))
+    let inicio = window.confirm('Deseas agregar algún producto? ')
+    while(inicio){
+        let producto = prompt('que producto desea agregar?');
+        let color = prompt('ingrese el color ');
+        let precio = parseInt(prompt('ingrese precio '));
+        let objetoAux = new Producto(producto, color, precio);
+        productos.push(objetoAux.precioFinal());
+        inicio = window.confirm('Deseas agregar algún producto? ');
+    }
+    return productos;
 }
-agregandoProductos()
 
-function agregarNuevoProducto(nombre, color, precio){
-    productos.push(new Producto(nombre, color, precio))
-}
-agregarNuevoProducto("zapatillas", "blancas", 12000);
+agregandoProductos();
 
 console.table(productos);
 
-// buscar todos los elementos que sean botas
+// funcion para buscar algun elemento y retornar los que coincidan
 function buscarElemento() {
     let busqueda = prompt("Ingrese producto a buscar ");
     let result = productos.filter(p => p.nombre === busqueda)
-    console.log(result);
+    return result
 }
-buscarElemento();
