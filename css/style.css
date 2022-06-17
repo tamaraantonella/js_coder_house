@@ -294,19 +294,33 @@ footer {
   .product__main .main__box .main__box--container {
     display: flex;
     flex-direction: column;
-    align-items: center; }
-    .product__main .main__box .main__box--container .cards-box {
-      margin: 15px 0px;
-      display: grid;
-      grid-template-columns: repeat(1, 70%);
-      gap: 10px;
-      justify-content: center; }
-      .product__main .main__box .main__box--container .cards-box .card img {
-        object-fit: cover;
-        object-position: center; }
-      .product__main .main__box .main__box--container .cards-box .card .card-body h5 {
-        text-transform: uppercase;
-        font-family: 'Kanit', sans-serif; }
+    align-items: center;
+    width: 100%; }
+    .product__main .main__box .main__box--container .product__contenido {
+      width: 100%; }
+      .product__main .main__box .main__box--container .product__contenido .listado {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+        align-self: flex-start; }
+        .product__main .main__box .main__box--container .product__contenido .listado li {
+          font-family: 'Kanit', sans-serif; }
+    .product__main .main__box .main__box--container .carrito {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 15px auto;
+      width: 100%; }
+      .product__main .main__box .main__box--container .carrito .collection {
+        align-self: flex-start;
+        display: flex;
+        flex-direction: column; }
+        .product__main .main__box .main__box--container .carrito .collection li {
+          font-family: 'Kanit', sans-serif;
+          color: #1f78e4; }
+      .product__main .main__box .main__box--container .carrito a i {
+        font-size: 1.5rem; }
 
 @media screen and (min-width: 568px) {
   .product__main .main__box {
@@ -318,3 +332,36 @@ footer {
       max-width: 75%; }
       .product__main .main__box .main__box--container .cards-box {
         grid-template-columns: repeat(3, 1fr); } }
+
+.pay__main {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 20px; }
+  .pay__main .datos-impresos {
+    font-family: 'Kanit', sans-serif;
+    background-color: gray;
+    padding: 10px;
+    color: white; }
+  .pay__main--text {
+    font-family: 'Kanit', sans-serif; }
+  .pay__main .color-formulario {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 500px;
+    gap: 10px;
+    margin: 0; }
+    .pay__main .color-formulario p {
+      font-family: 'Kanit', sans-serif; }
+    .pay__main .color-formulario input {
+      border: 1px solid #a6a2a2;
+      height: 25px; }
+    .pay__main .color-formulario .btn-send {
+      width: 50%;
+      max-width: 150px;
+      font-family: 'Kanit', sans-serif;
+      border: none;
+      background-color: #1f78e4;
+      color: white; }

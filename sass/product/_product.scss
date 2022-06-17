@@ -26,26 +26,60 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            .cards-box{
-                margin: 15px 0px;
-                display: grid;
-                grid-template-columns: repeat(1, 70%);
-                gap: 10px;
-                justify-content: center;
-                .card{
-                    img{
-                        object-fit: cover;
-                        object-position: center;
-                    }
-                    .card-body{
-                        h5{
-                            text-transform: uppercase;
-                            font-family: 'Kanit', sans-serif;
-                        }
+            width: 100%;
+            // .cards-box{
+            //     margin: 15px 0px;
+            //     display: grid;
+            //     grid-template-columns: repeat(1, 70%);
+            //     gap: 10px;
+            //     justify-content: center;
+            //     .card{
+            //         img{
+            //             object-fit: cover;
+            //             object-position: center;
+            //         }
+            //         .card-body{
+            //             h5{
+            //                 text-transform: uppercase;
+            //                 font-family: 'Kanit', sans-serif;
+            //             }
+            //         }
+            //     }
+            // }
+            .product__contenido{
+                width: 100%;
+                .listado{
+                    display: flex;
+                    flex-direction: column;
+                    width: 80%;
+                    margin: 0 auto;
+                    align-self: flex-start;
+                    li{
+                        font-family: 'Kanit', sans-serif;
                     }
                 }
             }
-        
+            .carrito{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin:15px auto;
+                width: 100%;
+                .collection{
+                    align-self: flex-start;
+                    display: flex;
+                    flex-direction: column;
+                    li{
+                        font-family: 'Kanit', sans-serif;
+                        color: #1f78e4;
+                    }
+                }
+                a{
+                    i{
+                        font-size: 1.5rem;
+                    }
+                }
+            }
         }
     }
 }

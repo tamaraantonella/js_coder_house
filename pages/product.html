@@ -8,7 +8,8 @@
     <!-- Font awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <title>Tienda Shoe Box</title>
-    <script src="../js/ejercicio.js"></script>
+    <script defer src="../js/variables.js"></script>
+    <script defer src="../js/miarchivo.js"></script>
     <!--Bootstrap  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
@@ -23,7 +24,6 @@
         </div>
         <div class="icono">
             <a href="product.html"><i class="fa-solid fa-store"></i></a>
-            <a href="carro.html"><i class="fa-solid fa-cart-shopping "></i></a>
         </div>
     </header>  
     <main class="product__main">
@@ -36,70 +36,20 @@
             <div class="main__box--title">
                 <p>Productos</p>
             </div>
+            <div id="saludo">
+                
+            </div>
             <div class="main__box--container">
-                <!-- filtros de busqueda -->
-                <aside class="filtros">
-                    <p>Filtros</p>
-                    <p>filtros</p>
-                </aside>
                 <!-- contenido -->
-                <div class="cards-box">
-                    <div class="card">
-                        <img src="../assets/b1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Borcegos negros</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Agregar al carrito</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="../assets/b2.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Borcegos negros</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Agregar al carrito</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="../assets/b3.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Borcegos marrones</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Agregar al carrito</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="../assets/b4.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Borcegos negros</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Agregar al carrito</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="../assets/b5.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Borcegos negros</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Agregar al carrito</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="../assets/b6.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Borcegos negros</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Agregar al carrito</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="../assets/b7.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Borcegos negros</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Agregar al carrito</a>
-                        </div>
-                    </div>
+                <div class="product__contenido">
+                    <ul id="listado">
+                    </ul>
+                </div>
+                <div class="carrito">
+                    <h3>Carrito</h3>
+                    <ul class="collection" id="listadoCarrito">
+                    </ul>
+                    <a href="pay.html"><i class="fa-solid fa-cart-shopping "></i></a>
                 </div>
                 
             </div>
