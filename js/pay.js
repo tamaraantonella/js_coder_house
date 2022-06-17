@@ -11,9 +11,12 @@ function datosImpresos() {
         let domicilio = prompt('ingrese domicilio: ');
         let persona = new ImprimirDatos(fullName, edad, domicilio);
         const personaDatos = document.createElement("div");
-        personaDatos.innerHTML= `<p>${persona.fullName} de ${persona.edad} años con domicilio en ${persona.domicilio} completa el siguiente formulario para abonar: </p>`
-        personaDatos.className="datos-impresos"
-        datosPersona.append(personaDatos);
+        if(fullName != "" && edad != 0 && domicilio != ""){
+            personaDatos.innerHTML= `<p>${persona.fullName} de ${persona.edad} años con domicilio en ${persona.domicilio} completa el siguiente formulario para abonar: </p>`
+            personaDatos.className="datos-impresos"
+            datosPersona.append(personaDatos);
+        }
+        
 }
 
 const focoEnCampos = ()=> {
@@ -34,16 +37,5 @@ document.addEventListener("submit", (event)=> {
     event.preventDefault()
 })
 
-
-inputNombre.addEventListener("keyup", (event)=> {
-    datosDeInput = event.target.value
-    console.log(datosDeInput)
-})
-
-inputNombre.addEventListener("keypress", (event)=> {
-    if (event.keyCode == 13) { //event.key = "Enter"
-        inputTelefono.focus()
-    }
-})
 datosImpresos();
 focoEnCampos()
