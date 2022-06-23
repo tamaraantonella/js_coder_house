@@ -1,0 +1,21 @@
+let stockProductos = [
+    {id: 1, nombre: "Athenas", tipo: "Borcegos", desc: "Calzado para todos los días", precio: 1200, talle: '36', img: '/assets/b1.jpg'},
+    {id: 2, nombre: "Bali", tipo: "Borcegos", desc: "Calzado para todos los días", precio: 1100, talle: '36', img: '/assets/b2.jpg'},
+    {id: 3, nombre: "Indonesia", tipo: "Borcegos", desc: "Calzado para todos los días", precio: 1200, talle: '38', img: '/assets/b3.jpg'},
+    {id: 4, nombre: "Miami", tipo: "Borcegos", desc: "Calzado para todos los días", precio: 1400, talle: '38', img: '/assets/b4.jpg'},
+    {id: 5, nombre: "Siria", tipo: "Borcegos", desc: "Calzado para todos los días", precio: 1200, talle: '40', img: '/assets/b5.jpg'},
+    {id: 6, nombre: "Marruecos", tipo: "Borcegos", desc: "Calzado para todos los días", precio: 1500, talle: '40', img: '/assets/b6.jpg'},
+    {id: 7, nombre: "Lima", tipo: "Borcegos", desc: "Calzado para todos los días", precio: 500, talle: '36', img: '/assets/b7.jpg'},
+    {id: 8, nombre: "Barranquilla", tipo: "Borcegos", desc: "Calzado para todos los días", precio: 500, talle: '36', img: '/assets/b8.jpg'},
+    {id: 9, nombre: "Atenas", tipo: "Borcegos", desc: "Calzado para todos los días", precio: 500, talle: '38', img: '/assets/b9.jpg'},
+    {id: 10, nombre: "Lisboa", tipo: "Borcegos", desc: "Calzado para todos los días", precio: 700, talle: '38', img: '/assets/b10.jpg'},
+    {id: 11, nombre: "Bilbao", tipo: "Borcegos", desc: "Calzado para todos los días", precio: 700, talle: '40', img: '/assets/b11.jpg'},
+    {id: 12, nombre: "Brasilia", tipo: "Borcegos", desc: "Calzado para todos los días", precio: 700, talle: '40', img: '/assets/b3.jpg'},
+    {id: 13, nombre: "Noruega", tipo: "camisa", desc: "Zapatillas para la semana", precio: 900, talle: '40', img: '/assets/z1.jpg'},
+    {id: 14, nombre: "Utrecht", tipo: "camisa", desc: "Zapatillas para la semana", precio: 1400, talle: '40', img: '/assets/z2.jpg'},
+    {id: 15, nombre: "París", tipo: "camisa", desc: "Zapatillas para la semana", precio: 7000, talle: '40', img: '/assets/z3.jpg'},
+    {id: 16, nombre: "Event", tipo: "camisa", desc: "Zapatillas para la semana", precio: 777, talle: '40', img: '/assets/z4.jpg'},
+    {id: 17, nombre: "Mexico", tipo: "camisa", desc: "Zapatillas para la semana", precio: 234, talle: '40', img: '/assets/z5.jpg'},
+    {id: 18, nombre: "Seul", tipo: "camisa", desc: "Zapatillas para la semana", precio: 1600, talle: '40', img: '/assets/z6.jpg'},
+]
+

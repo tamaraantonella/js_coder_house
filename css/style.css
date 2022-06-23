@@ -22,6 +22,19 @@ header {
       color: black;
       display: inline-block;
       margin: 0 5px; }
+    header .icono button {
+      border: none;
+      background-color: white;
+      border: none;
+      color: black;
+      font-size: 30px;
+      background-color: white;
+      padding: 10px 20px;
+      transition: all 0.3s; }
+      header .icono button--hover {
+        cursor: pointer; }
+      header .icono button--focus {
+        outline: none; }
 
 @media screen and (min-width: 768px) {
   header {
@@ -282,56 +295,67 @@ footer {
     border-radius: 20px;
     padding: 15px; }
 
+.product__main .seleccion {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  margin: 10px auto; }
+  .product__main .seleccion select {
+    width: 100%;
+    border: 0.5px solid rgba(128, 128, 128, 0.541); }
+
 .product__main .main__box {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%; }
-  .product__main .main__box .main__box--title {
-    text-transform: uppercase;
-    font-size: 2rem;
-    font-family: 'Kanit', sans-serif; }
-  .product__main .main__box .main__box--container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%; }
-    .product__main .main__box .main__box--container .product__contenido {
-      width: 100%; }
-      .product__main .main__box .main__box--container .product__contenido .listado {
-        display: flex;
-        flex-direction: column;
-        width: 80%;
-        margin: 0 auto;
-        align-self: flex-start; }
-        .product__main .main__box .main__box--container .product__contenido .listado li {
-          font-family: 'Kanit', sans-serif; }
-    .product__main .main__box .main__box--container .carrito {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: space-around;
+  gap: 15px;
+  width: 80%;
+  margin: 25px auto; }
+  .product__main .main__box .producto {
+    height: fit-content; }
+    .product__main .main__box .producto .card {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      margin: 15px auto;
-      width: 100%; }
-      .product__main .main__box .main__box--container .carrito .collection {
-        align-self: flex-start;
-        display: flex;
-        flex-direction: column; }
-        .product__main .main__box .main__box--container .carrito .collection li {
+      justify-content: center;
+      width: 250px;
+      height: 430px; }
+      .product__main .main__box .producto .card img {
+        height: 200px;
+        width: 200px;
+        align-self: center; }
+      .product__main .main__box .producto .card .card-body {
+        margin: 0px;
+        padding: 10px; }
+        .product__main .main__box .producto .card .card-body span {
           font-family: 'Kanit', sans-serif;
-          color: #1f78e4; }
-      .product__main .main__box .main__box--container .carrito a i {
-        font-size: 1.5rem; }
+          text-transform: uppercase; }
+      .product__main .main__box .producto .card .card-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 10px;
+        font-family: 'Kanit', sans-serif; }
+        .product__main .main__box .producto .card .card-content p {
+          font-size: 1rem;
+          line-height: normal; }
+
+.product__main #exampleModal .modal-content .modal-body .productoEnCarrito {
+  display: flex;
+  justify-content: space-around; }
+  .product__main #exampleModal .modal-content .modal-body .productoEnCarrito button {
+    border: none;
+    color: gray;
+    background-color: white; }
+
+.product__main #exampleModal .modal-content .precioProducto {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px; }
 
 @media screen and (min-width: 568px) {
-  .product__main .main__box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%; }
-    .product__main .main__box .main__box--container {
-      max-width: 75%; }
-      .product__main .main__box .main__box--container .cards-box {
-        grid-template-columns: repeat(3, 1fr); } }
+  .product__main {
+    font: 100; } }
 
 .pay__main {
   display: flex;

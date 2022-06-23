@@ -12,73 +12,80 @@
             padding: 15px;
         }
     }
+    .seleccion{
+        display: flex;
+        justify-content: center;
+        width: 30%;
+        margin: 10px auto;
+        select{
+            width: 100%;
+            border: .5px solid rgba(128, 128, 128, 0.541);
+        }
+    }
     .main__box{
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        .main__box--title{
-            text-transform: uppercase;
-            font-size: 2rem;
-            font-family: 'Kanit', sans-serif;
-        }
-        .main__box--container{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            // .cards-box{
-            //     margin: 15px 0px;
-            //     display: grid;
-            //     grid-template-columns: repeat(1, 70%);
-            //     gap: 10px;
-            //     justify-content: center;
-            //     .card{
-            //         img{
-            //             object-fit: cover;
-            //             object-position: center;
-            //         }
-            //         .card-body{
-            //             h5{
-            //                 text-transform: uppercase;
-            //                 font-family: 'Kanit', sans-serif;
-            //             }
-            //         }
-            //     }
-            // }
-            .product__contenido{
-                width: 100%;
-                .listado{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: space-around;
+        gap: 15px;
+        width: 80%;
+        margin: 25px auto;
+        .producto{
+            height: fit-content;
+            .card{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 250px;
+                height: 430px;
+                img{
+                    height: 200px;
+                    width: 200px;
+                    align-self: center;
+                }
+                .card-body{
+                    margin: 0px;
+                    padding: 10px;
+                    span{
+                        
+                        font-family: 'Kanit', sans-serif;
+                        text-transform: uppercase;
+                        
+                    }
+                }
+                .card-content{
                     display: flex;
                     flex-direction: column;
-                    width: 80%;
-                    margin: 0 auto;
-                    align-self: flex-start;
-                    li{
-                        font-family: 'Kanit', sans-serif;
+                    justify-content: space-around;
+                    padding: 10px;
+                    font-family: 'Kanit', sans-serif;
+                    p{
+                        font-size: 1rem;
+                        line-height: normal;
+                    }
+                }
+                
+            }
+        }
+        
+    }
+    #exampleModal{
+        .modal-content{
+            .modal-body{
+                .productoEnCarrito{
+                    display: flex;
+                    justify-content: space-around;
+                    button{
+                        border: none;
+                        color: gray;
+                        background-color: white;
                     }
                 }
             }
-            .carrito{
+            .precioProducto{
                 display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin:15px auto;
-                width: 100%;
-                .collection{
-                    align-self: flex-start;
-                    display: flex;
-                    flex-direction: column;
-                    li{
-                        font-family: 'Kanit', sans-serif;
-                        color: #1f78e4;
-                    }
-                }
-                a{
-                    i{
-                        font-size: 1.5rem;
-                    }
-                }
+                justify-content: flex-end;
+                padding: 10px;
             }
         }
     }
@@ -86,18 +93,7 @@
 
 @media screen and (min-width: 568px){
     .product__main{
-        .main__box{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            .main__box--container{
-                max-width: 75%;
-                .cards-box{
-                    grid-template-columns: repeat(3, 1fr);
-                }
-            
-            }
-        }
+        font: 100;
     }
 }
+
