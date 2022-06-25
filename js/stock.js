@@ -11,11 +11,11 @@ let stockProductos = [
     {id: 10, nombre: "Lisboa", tipo: "Borcegos", desc: "Calzado para todos los días", precio: 700, talle: '38', img: '../assets/b10.jpg'},
     {id: 11, nombre: "Bilbao", tipo: "Borcegos", desc: "Calzado para todos los días", precio: 700, talle: '40', img: '../assets/b11.jpg'},
     {id: 12, nombre: "Brasilia", tipo: "Borcegos", desc: "Calzado para todos los días", precio: 700, talle: '40', img: '../assets/b3.jpg'},
-    {id: 13, nombre: "Noruega", tipo: "camisa", desc: "Zapatillas para la semana", precio: 900, talle: '40', img: '../assets/z1.jpg'},
-    {id: 14, nombre: "Utrecht", tipo: "camisa", desc: "Zapatillas para la semana", precio: 1400, talle: '40', img: '../assets/z2.jpg'},
-    {id: 15, nombre: "París", tipo: "camisa", desc: "Zapatillas para la semana", precio: 7000, talle: '40', img: '../assets/z3.jpg'},
-    {id: 16, nombre: "Event", tipo: "camisa", desc: "Zapatillas para la semana", precio: 777, talle: '40', img: '../assets/z4.jpg'},
-    {id: 17, nombre: "Mexico", tipo: "camisa", desc: "Zapatillas para la semana", precio: 234, talle: '40', img: '../assets/z5.jpg'},
-    {id: 18, nombre: "Seul", tipo: "camisa", desc: "Zapatillas para la semana", precio: 1600, talle: '40', img: '../assets/z6.jpg'},
+    {id: 13, nombre: "Noruega", tipo: "Zapatilas", desc: "Zapatillas para la semana", precio: 900, talle: '40', img: '../assets/z1.jpg'},
+    {id: 14, nombre: "Utrecht", tipo: "Zapatilas", desc: "Zapatillas para la semana", precio: 1400, talle: '40', img: '../assets/z2.jpg'},
+    {id: 15, nombre: "París", tipo: "Zapatilas", desc: "Zapatillas para la semana", precio: 7000, talle: '40', img: '../assets/z3.jpg'},
+    {id: 16, nombre: "Event", tipo: "Zapatilas", desc: "Zapatillas para la semana", precio: 777, talle: '40', img: '../assets/z4.jpg'},
+    {id: 17, nombre: "Mexico", tipo: "Zapatilas", desc: "Zapatillas para la semana", precio: 234, talle: '40', img: '../assets/z5.jpg'},
+    {id: 18, nombre: "Seul", tipo: "Zapatilas", desc: "Zapatillas para la semana", precio: 1600, talle: '40', img: '../assets/z6.jpg'},
 ]
 

@@ -1,40 +1,43 @@
-.pay__main{
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    .datos-impresos{
-        font-family: 'Kanit', sans-serif;
-        background-color: gray ;
-        padding: 10px;
-        color: white;
-        
-    }
-    &--text{
-        font-family: 'Kanit', sans-serif;
-    }
-    .color-formulario{
-        display: flex;
-        flex-direction: column;
-        width: 90%;
-        max-width:500px;
-        gap: 10px;
-        margin: 0;
-        p{
-            font-family: 'Kanit', sans-serif;
+.main__pay{
+    &--form{
+        width: 80%;
+        max-width: 600px;
+        margin:0 auto;
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 60vh;
+            gap:15px;
+            width: 100%;
+            p{
+                text-align: center;
+                font-family: 'Kanit', sans-serif;
+            }
+            input{
+                border: 1px solid rgba(192, 192, 192, 0.521);
+                padding: 10px;
+            }
+            #submit{
+                background-color: rgba(35, 89, 236, 0.842);
+                color:white;
+                font-weight: bolder;
+                max-width: 50%;
+                align-self: center;
+            }
         }
-        input{
-            border: 1px solid rgb(166, 162, 162);
-            height: 25px;
-        }
-        .btn-send{
-            width: 50%;
-            max-width: 150px ;
-            font-family: 'Kanit', sans-serif;
-            border: none;
-            background-color:  rgb(31, 120, 228);
-            color: white;
+    }
+}
+@media screen and (min-width:768px){
+    .main__pay{
+        &--form{
+            form{
+                height: 70vh;
+                gap:25px;
+                p{
+                    font-size: 25px;
+                }
+            }
         }
     }
 }

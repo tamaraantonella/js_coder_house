@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Font awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+        <title>Tienda Shoe Box</title>
+        <script  defer src="../js/variables.js"></script>
+        <script defer src="../js/pay.js"></script>
+        <!--Bootstrap  -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <header> 
+            <div class="logo">
+                <a href="../index.html"><img src="../assets/logo.png" alt="logo"></a>
+            </div>
+            <div class="icono">
+                <a href="product.html"><i class="fa-solid fa-store"></i></a>
+                <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" id="boton-carrito" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span>
+                    </button>
+            </div>
+        </header>  
+        <!-- MAIN -->
+        <main class="main__pay">
+            <div class="main__pay--form">
+                <form action="#" class="color-formulario z-depth-2">
+                    <p>Ingrese sus datos para enviarle la compra:</p> 
+                    <input type="text" id="inputNombre" placeholder="Ingrese su nombre">
+                    <input type="tel" id="inputTelefono" placeholder="Su teléfono móvil">
+                    <input type="email" id="inputEmail" placeholder="Correo electrónico">
+                    <input type="submit" class="btn orange white-text" id="submit" value="ENVIAR">
+                </form>
+            </div>
+            
+        </main>
+        <!---------------- footer -------------- -->
+        <footer>
+            <div class="footer_title">
+                <p>visitá nuestras redes</p>
+            </div>
+            <div class="footer_redes">
+                <img src="../assets/fb.png" alt="">
+                <img src="../assets/tw.png" alt="">
+                <img src="../assets/ig.png" alt="">
+            </div>
+        </footer>
+    </body>
+</html>

@@ -32,11 +32,18 @@ header{
             color:black;
             font-size: 30px;
             background-color: white;
-            
             padding: 10px 20px;
             transition: all 0.3s;
+            a{
+                i{
+                    &--hover{
+                        color:white;
+                    }
+                }
+            }
             &--hover {
-                cursor: pointer;                
+                cursor: pointer;  
+                background-color: white;              
             }
             &--focus {
                 outline: none;

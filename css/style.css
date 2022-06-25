@@ -31,8 +31,11 @@ header {
       background-color: white;
       padding: 10px 20px;
       transition: all 0.3s; }
+      header .icono button a i--hover {
+        color: white; }
       header .icono button--hover {
-        cursor: pointer; }
+        cursor: pointer;
+        background-color: white; }
       header .icono button--focus {
         outline: none; }
 
@@ -357,35 +360,33 @@ footer {
   .product__main {
     font: 100; } }
 
-.pay__main {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  margin: 0 auto;
-  margin-bottom: 20px; }
-  .pay__main .datos-impresos {
-    font-family: 'Kanit', sans-serif;
-    background-color: gray;
-    padding: 10px;
-    color: white; }
-  .pay__main--text {
-    font-family: 'Kanit', sans-serif; }
-  .pay__main .color-formulario {
+.main__pay--form {
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto; }
+  .main__pay--form form {
     display: flex;
     flex-direction: column;
-    width: 90%;
-    max-width: 500px;
-    gap: 10px;
-    margin: 0; }
-    .pay__main .color-formulario p {
+    justify-content: center;
+    height: 60vh;
+    gap: 15px;
+    width: 100%; }
+    .main__pay--form form p {
+      text-align: center;
       font-family: 'Kanit', sans-serif; }
-    .pay__main .color-formulario input {
-      border: 1px solid #a6a2a2;
-      height: 25px; }
-    .pay__main .color-formulario .btn-send {
-      width: 50%;
-      max-width: 150px;
-      font-family: 'Kanit', sans-serif;
-      border: none;
-      background-color: #1f78e4;
-      color: white; }
+    .main__pay--form form input {
+      border: 1px solid rgba(192, 192, 192, 0.521);
+      padding: 10px; }
+    .main__pay--form form #submit {
+      background-color: rgba(35, 89, 236, 0.842);
+      color: white;
+      font-weight: bolder;
+      max-width: 50%;
+      align-self: center; }
+
+@media screen and (min-width: 768px) {
+  .main__pay--form form {
+    height: 70vh;
+    gap: 25px; }
+    .main__pay--form form p {
+      font-size: 25px; } }

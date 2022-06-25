@@ -26,11 +26,14 @@
             <a href="../index.html"><img src="../assets/logo.png" alt="logo"></a>
         </div>
         <div class="icono">
-            <a href="product.html"><i class="fa-solid fa-store"></i></a>
+            
+            <button type="button" class="btn btn-primary">
+                <a href="product.html"><i class="fa-solid fa-store"></i></a>
+            </button>
             <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" id="boton-carrito" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span>
-                </button>
+            <button type="button" class="btn btn-primary" id="boton-carrito" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span>
+            </button>
         </div>
     </header>  
     <main class="product__main">
@@ -71,7 +74,7 @@
                     <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
                     <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir comprando</button>
-                    <button type="button" id="terminar" class="btn btn-primary">Comprar</button>
+                    <button type="button" id="terminar" class="btn btn-primary" onclick="location.href='pay.html'">Comprar</button>
                     </div>
                 </div>
             </div>

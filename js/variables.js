@@ -11,3 +11,10 @@ const precioTotal = document.getElementById('precioTotal');
 
 const selecTalles = document.getElementById('selecTalles')
 const buscador = document.getElementById('search')
+
+const inputNombre = document.querySelector("#inputNombre")
+const inputTel = document.querySelector("#inputTelefono")
+const inputEmail = document.querySelector("#inputEmail")
+const btnSubmit = document.querySelector("#submit")
+
+let datosDeInput = ""
