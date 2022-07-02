@@ -31,13 +31,13 @@
         width: 80%;
         margin: 25px auto;
         .producto{
-            height: fit-content;
+            height: 450px;
             .card{
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 width: 250px;
-                height: 430px;
+                min-height: 430px;
                 img{
                     height: 200px;
                     width: 200px;

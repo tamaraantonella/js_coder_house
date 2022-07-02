@@ -34,7 +34,9 @@ selecTalles.addEventListener('change',()=>{
     selecTalles.value === 'all' ? mostrarProductos(stockProductos) : mostrarProductos(arrayNuevo)
 })
 
-mostrarProductos(stockProductos)
+document.addEventListener("DOMContentLoaded", ()=>{
+    mostrarProductos(stockProductos)
+})
 
 //logica Ecommerce
 function mostrarProductos(array){
@@ -57,36 +59,54 @@ function mostrarProductos(array){
         contenedorProductos.appendChild(div)
         let btnAgregar = document.getElementById(`boton${el.id}`)
         btnAgregar.addEventListener('click',()=>{
-            agregarAlCarrito(el.id);
+            mostrarCarrito(el.id);
         })
     })
 
 
 }
 
-function agregarAlCarrito(id) {
-    let productoAgregar = stockProductos.find(obj=> obj.id === id)
-    carritoDeCompras.push(productoAgregar)
-    mostrarCarrito(productoAgregar)
-    actualizarCarrito()
-}
 
 function  actualizarCarrito (){
     contadorCarrito.innerText = carritoDeCompras.length
     precioTotal.innerText = carritoDeCompras.reduce((acc,el)=> acc + el.precio, 0 )   //acumulador     
 }  
 
-function mostrarCarrito(productoAgregar) {
-    let div = document.createElement('div')
-    div.setAttribute('class', 'productoEnCarrito')
+function mostrarCarrito(id) {
+    let productoAgregar
+    let btnEliminar
+    let div
+    evaluar(id) ? console.log("Ta bien") : (
+    productoAgregar = stockProductos.find(obj=> obj.id === id),
+    carritoDeCompras.push(productoAgregar),
+    div = document.createElement('div'),
+    div.setAttribute('class', 'productoEnCarrito'),
     div.innerHTML=`<p>${productoAgregar.nombre}</p>
+                    <p id="${id}">1</p>
                     <p>Precio: $${productoAgregar.precio}</p>
-                    <button id="eliminar${productoAgregar.id}" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>`
-    contenedorCarrito.appendChild(div)
-    let btnEliminar = document.getElementById(`eliminar${productoAgregar.id}`)
+                    <button id="eliminar${productoAgregar.id}" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>`,
+    contenedorCarrito.appendChild(div),
+    btnEliminar = document.getElementById(`eliminar${productoAgregar.id}`),
     btnEliminar.addEventListener('click',()=>{
-        btnEliminar.parentElement.remove()
+        const el = document.getElementById(id)
+        el.innerText == 1 ? btnEliminar.parentNode.remove():
+        el.innerText = parseInt(el.innerText) - 1
+
+        
         carritoDeCompras = carritoDeCompras.filter(elemento => elemento.id !== productoAgregar.id)
         actualizarCarrito()
-    })
+    }),
+    actualizarCarrito()
+    )
+}
+
+const evaluar = (id) => {
+    let el
+    let valor
+    carritoDeCompras.some(elemento => elemento.id === id) ? (
+        valor = true,
+        el = document.getElementById(id),
+        el.innerText = parseInt(el.innerText) + 1
+    ) : valor = false
+    return valor
 }
