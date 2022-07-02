@@ -28,52 +28,38 @@ function agregandoProductos() {
 
 // agregandoProductos();
 
-//filtro
+//filtro 
 selecTalles.addEventListener('change',()=>{
-    console.log(selecTalles.value);
-    if(selecTalles.value == 'all'){
-        mostrarProductos(stockProductos)
-    }else{
-        let arrayNuevo = stockProductos.filter(elemento => elemento.talle === selecTalles.value)
-        console.log(arrayNuevo);
-        mostrarProductos(arrayNuevo)
-    }
+    let arrayNuevo = stockProductos.filter(elemento => elemento.talle === selecTalles.value)
+    selecTalles.value === 'all' ? mostrarProductos(stockProductos) : mostrarProductos(arrayNuevo)
 })
 
-//Buscado
-
 mostrarProductos(stockProductos)
+
 //logica Ecommerce
 function mostrarProductos(array){
-
     contenedorProductos.innerHTML = ""
-
     array.forEach(el => {
-    let div = document.createElement('div')
-    // div.className = 'producto'
-    // div.setAttribute('class', 'producto')
-    div.classList.add('producto')
-    div.innerHTML= `<div class="card">
-                    <img src="${el.img}">
-                    <div class="card-body">
-                        <span class="card-title">${el.tipo} ${el.nombre} </span>
-                    </div>
-                    <div class="card-content">
-                        <p>${el.desc}</p>
-                        <p>Talle: ${el.talle}</p>
-                        <p>$${el.precio}</p>
-                        <a id="boton${el.id}" class="btn btn-primary">Agregar al carrito<i class="fa-solid fa-cart-shopping"></i></a>
-                    </div>
-                </div> `
-
-    contenedorProductos.appendChild(div)
-    
-    let btnAgregar = document.getElementById(`boton${el.id}`)
-    // console.log(btnAgregar);
-    btnAgregar.addEventListener('click',()=>{
-        agregarAlCarrito(el.id);
+        let div = document.createElement('div')
+        div.classList.add('producto')
+        div.innerHTML= `<div class="card">
+                        <img src="${el.img}">
+                        <div class="card-body">
+                            <span class="card-title">${el.tipo} ${el.nombre} </span>
+                        </div>
+                        <div class="card-content">
+                            <p>${el.desc}</p>
+                            <p>Talle: ${el.talle}</p>
+                            <p>$${el.precio}</p>
+                            <a id="boton${el.id}" class="btn btn-primary">Agregar al carrito<i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                    </div> `
+        contenedorProductos.appendChild(div)
+        let btnAgregar = document.getElementById(`boton${el.id}`)
+        btnAgregar.addEventListener('click',()=>{
+            agregarAlCarrito(el.id);
+        })
     })
-  })
 
 
 }
@@ -85,29 +71,22 @@ function agregarAlCarrito(id) {
     actualizarCarrito()
 }
 
-function mostrarCarrito(productoAgregar) {
+function  actualizarCarrito (){
+    contadorCarrito.innerText = carritoDeCompras.length
+    precioTotal.innerText = carritoDeCompras.reduce((acc,el)=> acc + el.precio, 0 )   //acumulador     
+}  
 
-   let div = document.createElement('div')
+function mostrarCarrito(productoAgregar) {
+    let div = document.createElement('div')
     div.setAttribute('class', 'productoEnCarrito')
     div.innerHTML=`<p>${productoAgregar.nombre}</p>
                     <p>Precio: $${productoAgregar.precio}</p>
                     <button id="eliminar${productoAgregar.id}" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>`
     contenedorCarrito.appendChild(div)
-
     let btnEliminar = document.getElementById(`eliminar${productoAgregar.id}`)
     btnEliminar.addEventListener('click',()=>{
         btnEliminar.parentElement.remove()
         carritoDeCompras = carritoDeCompras.filter(elemento => elemento.id !== productoAgregar.id)
-        console.log(carritoDeCompras);
         actualizarCarrito()
     })
 }
-
-
-function  actualizarCarrito (){
-    contadorCarrito.innerText = carritoDeCompras.length
-    precioTotal.innerText = carritoDeCompras.reduce((acc,el)=> acc + el.precio, 0 )   //acumulador     
-}                                                          
-
-
-

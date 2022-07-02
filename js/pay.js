@@ -17,8 +17,16 @@ function guardarDatosDeUser() {
 document.addEventListener("submit", (e) => {
     e.preventDefault()
     guardarDatosDeUser()
-    alert("Formulario enviado")
+    alertForm('Formulario enviado')
 })
+
+const alertForm = (mensaje) => {
+    Swal.fire({
+        title: mensaje,
+        text: 'Gracias por su compra.',
+        icon: 'success',
+        confirmButtonText: 'Cool'})
+}
 
 function recuperoDatosUser() {
     if(localStorage.getItem("datosUser")) {
