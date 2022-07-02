@@ -42,7 +42,7 @@ function mostrarProductos(array){
     array.forEach(el => {
         let div = document.createElement('div')
         div.classList.add('producto')
-        div.innerHTML= `<div class="card">
+        div.innerHTML= `<div class="card border-light">
                         <img src="${el.img}">
                         <div class="card-body">
                             <span class="card-title">${el.tipo} ${el.nombre} </span>
@@ -51,7 +51,7 @@ function mostrarProductos(array){
                             <p>${el.desc}</p>
                             <p>Talle: ${el.talle}</p>
                             <p>$${el.precio}</p>
-                            <a id="boton${el.id}" class="btn btn-primary">Agregar al carrito<i class="fa-solid fa-cart-shopping"></i></a>
+                            <button type="button"  class="btn btn-outline-secondary" id="boton${el.id}">Agregar al carrito<i class="fa-solid fa-cart-shopping"></i></button>
                         </div>
                     </div> `
         contenedorProductos.appendChild(div)

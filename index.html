@@ -9,6 +9,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <title>The shoe box</title>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <!---------------- HEADER -------------- -->
@@ -21,7 +23,7 @@
         </div>
     </header>   
     <!---------------- banner -------------- -->
-    <div class="banner">
+    <div class="banner" data-aos="fade-up"     data-aos-anchor-placement="top-bottom">
         <div class="bg-banner">
             <p>Calzados para vos</p>
         </div>
@@ -33,7 +35,7 @@
         </div>
         <div class="temporada--img">
             <div class="temporada--img__bg">
-                <p>HOT SALE</p>
+                <p class="animate__heartBeat" data-aos="zoom-in">HOT SALE</p>
             </div>
         </div>
     </div>
@@ -112,5 +114,8 @@
             <img src="assets/ig.png" alt="">
         </div>
     </footer>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

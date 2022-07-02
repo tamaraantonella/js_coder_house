@@ -25,7 +25,7 @@ const alertForm = (mensaje) => {
         title: mensaje,
         text: 'Gracias por su compra.',
         icon: 'success',
-        confirmButtonText: 'Cool'})
+        confirmButtonText: 'OK'})
 }
 
 function recuperoDatosUser() {
