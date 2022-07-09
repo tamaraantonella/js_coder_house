@@ -316,13 +316,13 @@ footer {
   width: 80%;
   margin: 25px auto; }
   .product__main .main__box .producto {
-    height: fit-content; }
+    height: 450px; }
     .product__main .main__box .producto .card {
       display: flex;
       flex-direction: column;
       justify-content: center;
       width: 250px;
-      height: 430px; }
+      min-height: 430px; }
       .product__main .main__box .producto .card img {
         height: 200px;
         width: 200px;

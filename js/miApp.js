@@ -106,7 +106,7 @@ function mostrarCarrito(id) {
 
 function  actualizarCarrito (){
     cantidad = carritoDeCompras.reduce((acc, el)=>{
-        let cantidad = parseInt(document.getElementById(`Contador${el.id}`).innerHTML) 
+        let cantidad = parseInt(document.getElementById(`Contador${el.id}`).innerHTML)
         return acc + cantidad
     },0)
     contadorCarrito.innerText = cantidad
