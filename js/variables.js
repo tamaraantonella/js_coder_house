@@ -22,7 +22,4 @@ let datosDeInput = "";
 const URL = `../js/stock.json`;
 let cardsAmostrar = "";
 let contenidoJSON = []
-<<<<<<< HEAD
 let stockProductos = []
-=======
->>>>>>> f596ba6896505991a2ced7d347c86e4d610b31a3
