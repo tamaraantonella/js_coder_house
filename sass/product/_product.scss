@@ -30,44 +30,37 @@
         gap: 15px;
         width: 80%;
         margin: 25px auto;
-        .producto{
-            height: 450px;
-            .card{
+        .card{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 250px;
+            height: 430px;
+            img{
+                height: 200px;
+                width: 200px;
+                align-self: center;
+            }
+            .card-body{
+                margin: 0px;
+                padding: 10px;
+                span{
+                    font-family: 'Kanit', sans-serif;
+                    text-transform: uppercase;
+                }
+            }
+            .card-content{
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
-                width: 250px;
-                min-height: 430px;
-                img{
-                    height: 200px;
-                    width: 200px;
-                    align-self: center;
+                justify-content: space-around;
+                padding: 10px;
+                font-family: 'Kanit', sans-serif;
+                p{
+                    font-size: 1rem;
+                    line-height: normal;
                 }
-                .card-body{
-                    margin: 0px;
-                    padding: 10px;
-                    span{
-                        
-                        font-family: 'Kanit', sans-serif;
-                        text-transform: uppercase;
-                        
-                    }
-                }
-                .card-content{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-around;
-                    padding: 10px;
-                    font-family: 'Kanit', sans-serif;
-                    p{
-                        font-size: 1rem;
-                        line-height: normal;
-                    }
-                }
-                
             }
         }
-        
     }
     #exampleModal{
         .modal-content{

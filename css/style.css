@@ -315,33 +315,31 @@ footer {
   gap: 15px;
   width: 80%;
   margin: 25px auto; }
-  .product__main .main__box .producto {
-    height: 450px; }
-    .product__main .main__box .producto .card {
+  .product__main .main__box .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 250px;
+    height: 430px; }
+    .product__main .main__box .card img {
+      height: 200px;
+      width: 200px;
+      align-self: center; }
+    .product__main .main__box .card .card-body {
+      margin: 0px;
+      padding: 10px; }
+      .product__main .main__box .card .card-body span {
+        font-family: 'Kanit', sans-serif;
+        text-transform: uppercase; }
+    .product__main .main__box .card .card-content {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      width: 250px;
-      min-height: 430px; }
-      .product__main .main__box .producto .card img {
-        height: 200px;
-        width: 200px;
-        align-self: center; }
-      .product__main .main__box .producto .card .card-body {
-        margin: 0px;
-        padding: 10px; }
-        .product__main .main__box .producto .card .card-body span {
-          font-family: 'Kanit', sans-serif;
-          text-transform: uppercase; }
-      .product__main .main__box .producto .card .card-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        padding: 10px;
-        font-family: 'Kanit', sans-serif; }
-        .product__main .main__box .producto .card .card-content p {
-          font-size: 1rem;
-          line-height: normal; }
+      justify-content: space-around;
+      padding: 10px;
+      font-family: 'Kanit', sans-serif; }
+      .product__main .main__box .card .card-content p {
+        font-size: 1rem;
+        line-height: normal; }
 
 .product__main #exampleModal .modal-content .modal-body .productoEnCarrito {
   display: flex;
