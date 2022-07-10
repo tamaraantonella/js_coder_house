@@ -113,7 +113,7 @@ function  actualizarCarrito (){
     precioTotal.innerText = carritoDeCompras.reduce((acc,el)=> {
         let cantidad = document.getElementById(`Contador${el.id}`).innerHTML
         let total = cantidad * el.precio
-        return acc + total
+        return acc + total;
     }, 0 )   //acumulador
 }
 
