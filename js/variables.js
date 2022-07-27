@@ -1,16 +1,13 @@
 let carritoDeCompras = []
 
 const contenedorProductos = document.getElementById('contenedor-productos'); //donde van a cargarse los elementos cuando aparezcan
+
 const contenedorCarrito = document.getElementById('carrito-contenedor');
+const comprarBtn = document.getElementById('comprar')
 
-const botonTerminar = document.getElementById('terminar')
-const finCompra = document.getElementById('fin-compra')
+const precioTotal = document.getElementById('totalCompra');
 
-const contadorCarrito = document.getElementById('contadorCarrito');
-const precioTotal = document.querySelector('.precioProducto');
 
-const selecTalles = document.getElementById('selecTalles')
-const buscador = document.getElementById('search')
 
 const inputNombre = document.querySelector("#inputNombre")
 const inputTel = document.querySelector("#inputTelefono")

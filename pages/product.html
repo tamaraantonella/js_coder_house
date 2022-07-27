@@ -8,7 +8,6 @@
     <!-- Font awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <title>Tienda Shoe Box</title>
-    <script  defer src="../js/stock.js"></script>
     <script  defer src="../js/variables.js"></script>
     <script  defer src="../js/miApp.js"></script>
     <!--Bootstrap  -->
@@ -18,6 +17,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <!---------------- HEADER -------------- -->
@@ -26,58 +26,34 @@
             <a href="../index.html"><img src="../assets/logo.png" alt="logo"></a>
         </div>
         <div class="icono">
-
             <button type="button" class="btn btn-light">
                 <a href="product.html"><i class="fa-solid fa-store"></i></a>
-            </button>
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-light" id="boton-carrito" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                <i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span>
             </button>
         </div>
     </header>
     <main class="product__main">
-        <!-- Boton de busqueda -->
-        <div class="main__search">
-            <input id="search" type="text" class="input" placeholder="Buscar producto">
-        </div>
+
         <!-- Seleccion -->
-        <div class="seleccion">
-            <select id="selecTalles">
-                <option value="all">Todos los talles</option>
-                <option value="36">36</option>
-                <option value="38">38</option>
-                <option value="40">40</option>
-            </select>
-        </div>
-        <!-- box general -->
-        <section class="main__box" id="contenedor-productos">
-        <!--
-        -->
-        </section>
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Carrito</h5>
-                        <button type="button" id="carritoCerrar" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body" id="carrito-contenedor">
-                    <!--<div class="productoEnCarrito">
-                            <p>Buzo 1</p>
-                            <p>Precio: $1200</p>
-                            <button class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
-                    </div>   -->
-                    </div>
-                    <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
-                    <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir comprando</button>
-                    <button type="button" id="terminar" class="btn btn-success" onclick="location.href='pay.html'">Comprar</button>
-                    </div>
-                </div>
+        <div class="w-100 d-flex flex-column align-items-center ">
+            <h3>Talles</h3>
+            <div id="talles" class="d-flex justify-content-around ">
             </div>
         </div>
+        <!-- box general -->
+        <section class="d-flex w-100 p-3">
+            <div class="main__box w-60" id="contenedor-productos"></div>
+            <div class="w-50 p-3 mb-2 m-3">
+                <p class="fw-semibold fs-4">Carrito de compras</p>
+                <div id='carrito-contenedor' >
+
+                </div>
+                <div id="finalizarCompra" >
+                    <p class="fw-bold text-end" id="totalCompra"></p>
+                    <button class="btn btn-primary" id="comprar" onclick="location.href='./pay.html'" >Comprar</button>
+                </div>
+            </div>
+        </section>
+
     </main>
     <!---------------- footer -------------- -->
     <footer>
