@@ -7,8 +7,6 @@ const comprarBtn = document.getElementById('comprar')
 
 const precioTotal = document.getElementById('totalCompra');
 
-
-
 const inputNombre = document.querySelector("#inputNombre")
 const inputTel = document.querySelector("#inputTelefono")
 const inputEmail = document.querySelector("#inputEmail")

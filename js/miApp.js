@@ -113,31 +113,22 @@ const agregarAlCarrito = (prodId) => {
 }
 
 
-//VACIAR CARRITO
-// vaciarCarrito.onclick = () => {
-//     precioTotal.innerText = ""
-//     carritoDeCompras.length = 0
-//     actualizarCarrito()
-//     avisoVacio()
-
-// }
-
 //ELIMINAR PRODUCTO DEL CARRITO
 function eliminarDelCarrito (prodID) {
-    const confirmar = confirm('Desea eliminar el producto?')
-    if (confirmar) {
-        const itemAEliminar = document.getElementById(prodID)
-        itemAEliminar.remove()
-    }
+    const item = carritoDeCompras.find((prod) => prod.id === prodID)
+    const indice = carritoDeCompras.indexOf(item)
+    carritoDeCompras.splice(indice, 1)
+    actualizarCarrito()
 
 }
 
+//actualizar carrito
 const actualizarCarrito = () => {
     contenedorCarrito.innerHTML = ""
     carritoDeCompras.forEach((prod) => {
         let div = document.createElement('div')
         div.classList.add('productoEnCarrito', 'd-flex', 'justify-content-start')
-        div.id = `${prod.id}Div`
+        div.id = `${prod.id}`
         div.setAttribute('role', 'button')
         div.innerHTML =
         `
@@ -150,10 +141,7 @@ const actualizarCarrito = () => {
         }
         contenedorCarrito.appendChild(div)
     })
-    let total= carritoDeCompras.reduce((acc,el)=> {
-        let total = el.cantidad * el.precio
-        return acc + total;
-    }, 0)
+    let total= carritoDeCompras.reduce((acc, prod)=> acc + prod.precio, 0)
     precioTotal.innerText = `Total $${total}`
     comprarBtn.className='btn btn-primary'
 
