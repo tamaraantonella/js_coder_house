@@ -36,55 +36,18 @@ function mostrarproductos() {
                         showConfirmButton: true,
                     })
                 })
-                //Botones de filtro por talle
-                const talles = ['36', '38', '40', 'Todos']
-                var content = document.getElementById('talles')
-                content.innerHTML = ""
-                talles.forEach(talle => {
-                    var btn = document.createElement('button')
-                    btn.innerHTML = talle
-                    btn.classList.add('btn', 'btn-primary', 'm-2')
-                    btn.addEventListener('click', () => {
-                        if (talle === 'Todos') {
-                            contenedorProductos.innerHTML = "";
-                            mostrarproductos()
-                        } else {
-                            let productoFiltrado = data.filter(e => e.talle === talle)
-                            contenedorProductos.innerHTML = ""
-                            productoFiltrado.forEach(producto => {
-                                const cardHTML = `
-                                    <div class="producto"
-                                        <div class="card">
-                                            <img src="${producto.img}">
-                                            <div class="card-body">
-                                                <span class="card-title">${producto.tipo} ${producto.nombre} </span>
-                                            </div>
-                                            <div class="card-content">
-                                                <p>${producto.desc}</p>
-                                                <p>Talle: ${producto.talle}</p>
-                                                <p>$${producto.precio}</p>
-                                                <a id="agregar${producto.id}" onclick=""class="btn btn-primary">Agregar al carrito<i class="fa-solid fa-cart-shopping"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>`
-                                contenedorProductos.innerHTML += cardHTML;
-                            })
-                        }
-                    })
-                    content.appendChild(btn)
-                })
             })
         })
     }
 
 
-// AVISO: EL CARRITO ESTÁ VACÍO
-let altercart = document.createElement('div')
-altercart.innerHTML = `
-    <p class="alert alert-warning" role="alert">EL CARRITO ESTÁ VACÍO</p> `
+// carrito vacio
+let carritoVacio = document.createElement('div')
+carritoVacio.innerHTML = `
+    <p class="alert alert-warning" role="alert">No hay nada en tu carrito</p> `
 const avisoVacio = () => {
 if(carritoDeCompras.length === 0) {
-    contenedorCarrito.append(altercart)
+    contenedorCarrito.append(carritoVacio)
     comprarBtn.className='d-none'
 }}
 avisoVacio()
@@ -149,4 +112,64 @@ const actualizarCarrito = () => {
     avisoVacio()
 }
 
+//Botones de filtro por talle
+const talles = ['36', '38', '40', 'Todos']
+var content = document.getElementById('talles')
+content.innerHTML = ""
+talles.forEach(talle => {
+    var btn = document.createElement('button')
+    btn.innerHTML = talle
+    btn.id= talle
+    btn.classList.add('btn', 'btn-primary', 'm-2')
+    btn.addEventListener('click', () => {
+        filtrarPorCat(btn.id)
+    })
+    content.appendChild(btn)
+})
 
+//filtrado
+function filtrarPorCat(id){
+    fetch(URL)
+    .then((response) => response.json())
+    .then((data) => {
+        contenedorProductos.innerHTML = ""
+        if (id === 'Todos') {
+            mostrarproductos()
+        }
+        const filtrarproductos = data.filter((prod) => prod.talle === id)
+        console.log(filtrarproductos)
+        filtrarproductos.forEach(producto => {
+            //Renderizando card
+            const div = document.createElement('div')
+            div.classList.add('card')
+            div.innerHTML = `        <div class="card">
+                                        <img src="${producto.img}">
+                                        <div class="card-body">
+                                            <span class="card-title">${producto.tipo} ${producto.nombre} </span>
+                                        </div>
+                                        <div class="card-content" id="addCarrito">
+                                            <p>${producto.desc}</p>
+                                            <p>Talle: ${producto.talle}</p>
+                                            <p>$${producto.precio}</p>
+                                            <a id="agregar${producto.id}" class="btn-buy btn btn-primary">Agregar al carrito<i class="fa-solid fa-cart-shopping"></i></a>
+                                        </div>
+                                    </div>
+                                `
+            contenedorProductos.appendChild(div);
+            //Botón para agregar productos
+            const boton = document.getElementById(`agregar${producto.id}`)
+            boton.addEventListener('click', () => {
+                agregarAlCarrito(producto.id)
+                //ALERT
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Agregaste al carrito',
+                    text: (producto.nombre),
+                    showConfirmButton: true,
+                })
+            })
+        })
+    })
+
+
+}
