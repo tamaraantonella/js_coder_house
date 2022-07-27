@@ -1,12 +1,13 @@
 
 document.addEventListener('DOMContentLoaded', () =>mostrarproductos())
 
-//MOSTRAR PRODUCTOS
+//Mostrar productos
 function mostrarproductos() {
     fetch(URL)
         .then((response) => response.json())
         .then((data) => {
             data.forEach(producto => {
+                //Renderizando card
                 const div = document.createElement('div')
                 div.classList.add('card')
                 div.innerHTML = `        <div class="card">
@@ -90,7 +91,7 @@ avisoVacio()
 
 
 
-//AGREGAR PRODUCTOS AL CARRITO, CANTIDAD++
+//Agregar al carrito
 const agregarAlCarrito = (prodId) => {
     const existe = carritoDeCompras.find(prod => prod.id === prodId)
     if (existe) {
@@ -113,38 +114,39 @@ const agregarAlCarrito = (prodId) => {
 }
 
 
-//ELIMINAR PRODUCTO DEL CARRITO
-function eliminarDelCarrito (prodID) {
-    const item = carritoDeCompras.find((prod) => prod.id === prodID)
-    const indice = carritoDeCompras.indexOf(item)
-    carritoDeCompras.splice(indice, 1)
-    actualizarCarrito()
+//Eliminar producto
+function eliminarDelCarrito(prodID) {
+
+    const confirma = confirm('Desea eliminar el producto?')
+    if (confirma) {
+        const item = carritoDeCompras.find((prod) => prod.id === prodID)
+        const indice = carritoDeCompras.indexOf(item)
+        carritoDeCompras.splice(indice, 1)
+        actualizarCarrito()
+    }
 
 }
 
-//actualizar carrito
+//Actualizar carrito
 const actualizarCarrito = () => {
     contenedorCarrito.innerHTML = ""
     carritoDeCompras.forEach((prod) => {
         let div = document.createElement('div')
-        div.classList.add('productoEnCarrito', 'd-flex', 'justify-content-start')
+        div.classList.add('productoEnCarrito', 'd-flex', 'w-100')
         div.id = `${prod.id}`
-        div.setAttribute('role', 'button')
         div.innerHTML =
         `
         <p class="px-3"><span id= "cantidad">${prod.cantidad}</span></p>
         <p class="px-3">${prod.nombre}</p>
         <p>$${prod.precio}</p>
+        <span onClick = (eliminarDelCarrito(${div.id})) class="px-3" role='button'><i class="fa-solid fa-trash"></i><span>
         `
-        div.ondblclick = () => {
-            eliminarDelCarrito(div.id)
-        }
         contenedorCarrito.appendChild(div)
     })
     let total= carritoDeCompras.reduce((acc, prod)=> acc + prod.precio, 0)
     precioTotal.innerText = `Total $${total}`
     comprarBtn.className='btn btn-primary'
-
+    avisoVacio()
 }
 
 

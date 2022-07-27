@@ -34,20 +34,20 @@
     <main class="product__main">
 
         <!-- Seleccion -->
-        <div class="w-100 d-flex flex-column align-items-center ">
+        <div class="w-100 d-flex flex-column align-items-center flex-wrap">
             <h3>Talles</h3>
             <div id="talles" class="d-flex justify-content-around ">
             </div>
         </div>
         <!-- box general -->
-        <section class="d-flex w-100 p-3">
-            <div class="main__box w-60" id="contenedor-productos"></div>
-            <div class="w-50 p-3 mb-2 m-3">
+        <section class="d-flex">
+            <div class="main__box" id="contenedor-productos"></div>
+            <div class="finalizarCompra">
                 <p class="fw-semibold fs-4">Carrito de compras</p>
                 <div id='carrito-contenedor' >
 
                 </div>
-                <div id="finalizarCompra" >
+                <div id="finalizarCompra"  >
                     <p class="fw-bold text-end" id="totalCompra"></p>
                     <button class="btn btn-primary" id="comprar" onclick="location.href='./pay.html'" >Comprar</button>
                 </div>

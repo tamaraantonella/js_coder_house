@@ -1,92 +1,83 @@
 .product__main{
-    .main__search{
+    section{
         display: flex;
+        flex-direction: column-reverse;
         justify-content: center;
-        width: 80%;
-        margin: 0 auto;
-        input{
-            width: 100%;
-            border: 1px solid rgba(205, 205, 205, 0.471);
-            height: 20px;
-            border-radius: 20px;
-            padding: 15px;
-        }
-    }
-    .seleccion{
-        display: flex;
-        justify-content: center;
-        width: 30%;
-        margin: 10px auto;
-        select{
-            width: 100%;
-            border: .5px solid rgba(128, 128, 128, 0.541);
-        }
-    }
-    .main__box{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: space-around;
-        gap: 15px;
-        width: 80%;
-        margin: 25px auto;
-        .card{
+        align-items: center;
+
+        .main__box{
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
             justify-content: center;
-            width: 250px;
-            height: 430px;
-            img{
-                height: 200px;
-                width: 200px;
-                align-self: center;
-            }
-            .card-body{
-                margin: 0px;
-                padding: 10px;
-                span{
-                    font-family: 'Kanit', sans-serif;
-                    text-transform: uppercase;
-                }
-            }
-            .card-content{
+            align-items: space-around;
+            gap: 15px;
+            width: 80%;
+            margin: 25px auto;
+            .card{
                 display: flex;
                 flex-direction: column;
-                justify-content: space-around;
-                padding: 10px;
-                font-family: 'Kanit', sans-serif;
-                p{
-                    font-size: 1rem;
-                    line-height: normal;
+                justify-content: center;
+                width: 250px;
+                height: 430px;
+                img{
+                    height: 200px;
+                    width: 200px;
+                    align-self: center;
                 }
-            }
-        }
-    }
-    #exampleModal{
-        .modal-content{
-            .modal-body{
-                .productoEnCarrito{
+                .card-body{
+                    margin: 0px;
+                    padding: 10px;
+                    span{
+                        font-family: 'Kanit', sans-serif;
+                        text-transform: uppercase;
+                    }
+                }
+                .card-content{
                     display: flex;
+                    flex-direction: column;
                     justify-content: space-around;
-                    button{
-                        border: none;
-                        color: gray;
-                        background-color: white;
+                    padding: 10px;
+                    font-family: 'Kanit', sans-serif;
+                    p{
+                        font-size: 1rem;
+                        line-height: normal;
                     }
                 }
             }
-            .precioProducto{
-                display: flex;
-                justify-content: flex-end;
-                padding: 10px;
-            }
+        }
+        .finalizarCompra{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            background-color: rgba(65, 60, 60, 0.575);
+            color:white;
+            padding: 15px;
+            max-width: 400px;
+
         }
     }
 }
 
-@media screen and (min-width: 568px){
+@media screen and (min-width: 1024px){
     .product__main{
-        font: 100;
+        section{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-items: flex-start;
+            margin:25px auto;
+            width: 90%;
+            .main__box{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: space-around;
+                gap: 15px;
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
     }
 }
 

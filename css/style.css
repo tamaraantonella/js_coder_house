@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;600&display=swap");
 * {
+  box-sizing: border-box; }
+
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -286,77 +289,70 @@ footer {
     width: 50%;
     justify-content: space-around; }
 
-.product__main .main__search {
+.product__main section {
   display: flex;
+  flex-direction: column-reverse;
   justify-content: center;
-  width: 80%;
-  margin: 0 auto; }
-  .product__main .main__search input {
-    width: 100%;
-    border: 1px solid rgba(205, 205, 205, 0.471);
-    height: 20px;
-    border-radius: 20px;
-    padding: 15px; }
-
-.product__main .seleccion {
-  display: flex;
-  justify-content: center;
-  width: 30%;
-  margin: 10px auto; }
-  .product__main .seleccion select {
-    width: 100%;
-    border: 0.5px solid rgba(128, 128, 128, 0.541); }
-
-.product__main .main__box {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: space-around;
-  gap: 15px;
-  width: 80%;
-  margin: 25px auto; }
-  .product__main .main__box .card {
+  align-items: center; }
+  .product__main section .main__box {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
-    width: 250px;
-    height: 430px; }
-    .product__main .main__box .card img {
-      height: 200px;
-      width: 200px;
-      align-self: center; }
-    .product__main .main__box .card .card-body {
-      margin: 0px;
-      padding: 10px; }
-      .product__main .main__box .card .card-body span {
-        font-family: 'Kanit', sans-serif;
-        text-transform: uppercase; }
-    .product__main .main__box .card .card-content {
+    align-items: space-around;
+    gap: 15px;
+    width: 80%;
+    margin: 25px auto; }
+    .product__main section .main__box .card {
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
-      padding: 10px;
-      font-family: 'Kanit', sans-serif; }
-      .product__main .main__box .card .card-content p {
-        font-size: 1rem;
-        line-height: normal; }
+      justify-content: center;
+      width: 250px;
+      height: 430px; }
+      .product__main section .main__box .card img {
+        height: 200px;
+        width: 200px;
+        align-self: center; }
+      .product__main section .main__box .card .card-body {
+        margin: 0px;
+        padding: 10px; }
+        .product__main section .main__box .card .card-body span {
+          font-family: 'Kanit', sans-serif;
+          text-transform: uppercase; }
+      .product__main section .main__box .card .card-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 10px;
+        font-family: 'Kanit', sans-serif; }
+        .product__main section .main__box .card .card-content p {
+          font-size: 1rem;
+          line-height: normal; }
+  .product__main section .finalizarCompra {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-color: rgba(65, 60, 60, 0.575);
+    color: white;
+    padding: 15px;
+    max-width: 400px; }
 
-.product__main #exampleModal .modal-content .modal-body .productoEnCarrito {
-  display: flex;
-  justify-content: space-around; }
-  .product__main #exampleModal .modal-content .modal-body .productoEnCarrito button {
-    border: none;
-    color: gray;
-    background-color: white; }
-
-.product__main #exampleModal .modal-content .precioProducto {
-  display: flex;
-  justify-content: flex-end;
-  padding: 10px; }
-
-@media screen and (min-width: 568px) {
-  .product__main {
-    font: 100; } }
+@media screen and (min-width: 1024px) {
+  .product__main section {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 25px auto;
+    width: 90%; }
+    .product__main section .main__box {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: space-around;
+      gap: 15px;
+      width: 80%;
+      margin: 0 auto; } }
 
 .main__pay--form {
   width: 80%;
