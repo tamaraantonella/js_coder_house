@@ -9,16 +9,6 @@ function guardarDatosDeUser() {
 
 }
 
-
-
-const alertForm = (mensaje) => {
-    Swal.fire({
-        title: mensaje,
-        text: 'Gracias por su compra.',
-        icon: 'success',
-        confirmButtonText: 'OK'})
-}
-
 function recuperoDatosUser() {
     if (localStorage.getItem("datosUser")) {
         const datosUser = JSON.parse(localStorage.getItem("datosUser"))
@@ -28,14 +18,6 @@ function recuperoDatosUser() {
     }
 }
 recuperoDatosUser()
-
-
-
-formulario.addEventListener("submit", (e) => {
-    e.preventDefault()
-    guardarDatosDeUser(),
-    enviarForm() ;
-})
 
 //validar form
 const enviarForm = () => {
@@ -53,3 +35,18 @@ const enviarForm = () => {
     }
     if(error.length===0) alertForm('Formulario enviado')
 }
+
+const alertForm = (mensaje) => {
+    Swal.fire({
+        title: mensaje,
+        text: 'Gracias por su compra.',
+        icon: 'success',
+        confirmButtonText: 'OK'})
+}
+
+formulario.addEventListener("submit", (e) => {
+    e.preventDefault()
+    guardarDatosDeUser(),
+    enviarForm() ;
+})
+

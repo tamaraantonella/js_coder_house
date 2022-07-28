@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () =>mostrarproductos())
 
 //Mostrar productos
@@ -38,8 +37,7 @@ function mostrarproductos() {
                 })
             })
         })
-    }
-
+}
 
 // carrito vacio
 let carritoVacio = document.createElement('div')
@@ -51,8 +49,6 @@ if(carritoDeCompras.length === 0) {
     comprarBtn.className='d-none'
 }}
 avisoVacio()
-
-
 
 //Agregar al carrito
 const agregarAlCarrito = (prodId) => {
@@ -74,7 +70,6 @@ const agregarAlCarrito = (prodId) => {
             })
     }
 }
-
 
 //Eliminar producto
 function eliminarDelCarrito(prodID) {
@@ -132,13 +127,13 @@ talles.forEach(talle => {
     btn.id= talle
     btn.classList.add('btn', 'btn-primary', 'm-2')
     btn.addEventListener('click', () => {
-        filtrarPorCat(btn.id)
+        filtrarProd(btn.id)
     })
     content.appendChild(btn)
 })
 
 //filtrado
-function filtrarPorCat(id){
+function filtrarProd(id){
     fetch(URL)
     .then((response) => response.json())
     .then((data) => {

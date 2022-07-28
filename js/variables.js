@@ -18,6 +18,6 @@ const formulario = document.getElementById('formulario')
 let datosDeInput = "";
 
 const URL = `../js/stock.json`;
-let cardsAmostrar = "";
+
 let contenidoJSON = []
 let stockProductos = []
