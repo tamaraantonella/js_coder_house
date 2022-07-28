@@ -180,6 +180,4 @@ function filtrarPorCat(id){
             })
         })
     })
-
-
 }

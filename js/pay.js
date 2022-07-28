@@ -40,12 +40,9 @@ formulario.addEventListener("submit", (e) => {
 //validar form
 const enviarForm = () => {
     var error =[]
-    if (inputNombre.value === null || inputNombre.value === "") {
-        error.push('Ingresa tu nombre')
-    }
-    if (inputTel.value === null || inputTel.value === "") {
-        error.push('Ingresa tu telefono')
-    }
+    if (inputNombre.value === null || inputNombre.value === "") error.push('Ingresa tu nombre')
+    if (inputTel.value === null || inputTel.value === "") error.push('Ingresa tu teléfono')
+    if(inputEmail.value === null || inputEmail.value === "") error.push('Ingresa tu mail')
     let text = error.join(', ')
     if (error.length > 0) {
         Swal.fire({
