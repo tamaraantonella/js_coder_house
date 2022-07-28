@@ -46,7 +46,8 @@ carritoVacio.innerHTML = `
 const avisoVacio = () => {
 if(carritoDeCompras.length === 0) {
     contenedorCarrito.append(carritoVacio)
-    comprarBtn.className='d-none'
+    comprarBtn.className = 'd-none'
+    vaciar.className= 'd-none'
 }}
 avisoVacio()
 
@@ -95,6 +96,14 @@ function eliminarDelCarrito(prodID) {
 
 }
 
+//vaciar carrito
+const vaciarCarrito = () => {
+    carritoDeCompras = []
+    actualizarCarrito()
+}
+
+vaciar.addEventListener('click', ()=> vaciarCarrito())
+
 //Actualizar carrito
 const actualizarCarrito = () => {
     contenedorCarrito.innerHTML = ""
@@ -113,7 +122,8 @@ const actualizarCarrito = () => {
     })
     let total= carritoDeCompras.reduce((acc, prod)=> acc + prod.precio*prod.cantidad, 0)
     precioTotal.innerText = `Total $${total}`
-    comprarBtn.className='btn btn-primary'
+    comprarBtn.className = 'btn btn-primary'
+    vaciar.className = 'btn btn-secondary'
     avisoVacio()
 }
 

@@ -5,7 +5,7 @@
     "tipo": "Borcegos",
     "cantidad": 1,
     "desc": "Calzado para todos los días",
-    "precio": 1200,
+    "precio": 6200,
     "talle": "36",
     "img": "../assets/b1.jpg"
   },
@@ -15,7 +15,7 @@
     "tipo": "Borcegos",
     "cantidad": 1,
     "desc": "Calzado para todos los días",
-    "precio": 1100,
+    "precio": 5100,
     "talle": "36",
     "img": "../assets/b2.jpg"
   },
@@ -25,7 +25,7 @@
     "tipo": "Borcegos",
     "cantidad": 1,
     "desc": "Calzado para todos los días",
-    "precio": 1200,
+    "precio": 7200,
     "talle": "38",
     "img": "../assets/b3.jpg"
   },
@@ -35,7 +35,7 @@
     "tipo": "Borcegos",
     "cantidad": 1,
     "desc": "Calzado para todos los días",
-    "precio": 1400,
+    "precio": 4400,
     "talle": "38",
     "img": "../assets/b4.jpg"
   },
@@ -45,7 +45,7 @@
     "tipo": "Borcegos",
     "cantidad": 1,
     "desc": "Calzado para todos los días",
-    "precio": 1200,
+    "precio": 5200,
     "talle": "40",
     "img": "../assets/b5.jpg"
   },
@@ -55,7 +55,7 @@
     "tipo": "Borcegos",
     "cantidad": 1,
     "desc": "Calzado para todos los días",
-    "precio": 1500,
+    "precio": 6500,
     "talle": "40",
     "img": "../assets/b6.jpg"
   },
@@ -65,7 +65,7 @@
     "tipo": "Borcegos",
     "cantidad": 1,
     "desc": "Calzado para todos los días",
-    "precio": 500,
+    "precio": 7500,
     "talle": "36",
     "img": "../assets/b7.jpg"
   },
@@ -75,7 +75,7 @@
     "tipo": "Borcegos",
     "cantidad": 1,
     "desc": "Calzado para todos los días",
-    "precio": 500,
+    "precio": 6500,
     "talle": "36",
     "img": "../assets/b8.jpg"
   },
@@ -85,7 +85,7 @@
     "tipo": "Borcegos",
     "cantidad": 1,
     "desc": "Calzado para todos los días",
-    "precio": 500,
+    "precio": 5800,
     "talle": "38",
     "img": "../assets/b9.jpg"
   },
@@ -95,7 +95,7 @@
     "tipo": "Borcegos",
     "cantidad": 1,
     "desc": "Calzado para todos los días",
-    "precio": 700,
+    "precio": 7100,
     "talle": "38",
     "img": "../assets/b10.jpg"
   },
@@ -105,7 +105,7 @@
     "tipo": "Borcegos",
     "cantidad": 1,
     "desc": "Calzado para todos los días",
-    "precio": 700,
+    "precio": 7900,
     "talle": "40",
     "img": "../assets/b11.jpg"
   },
@@ -115,34 +115,34 @@
     "tipo": "Borcegos",
     "cantidad": 1,
     "desc": "Calzado para todos los días",
-    "precio": 700,
+    "precio": 7900,
     "talle": "40",
     "img": "../assets/b3.jpg"
   },
   {
     "id": 13,
     "nombre": "Noruega",
-    "tipo": "Zapatilas",
+    "tipo": "zapatillas",
     "cantidad": 1,
     "desc": "Zapatillas para la semana",
-    "precio": 900,
+    "precio": 5900,
     "talle": "40",
     "img": "../assets/z1.jpg"
   },
   {
     "id": 14,
     "nombre": "Utrecht",
-    "tipo": "Zapatilas",
+    "tipo": "zapatillas",
     "cantidad": 1,
     "desc": "Zapatillas para la semana",
-    "precio": 1400,
+    "precio": 4400,
     "talle": "40",
     "img": "../assets/z2.jpg"
   },
   {
     "id": 15,
     "nombre": "París",
-    "tipo": "Zapatilas",
+    "tipo": "zapatillas",
     "cantidad": 1,
     "desc": "Zapatillas para la semana",
     "precio": 7000,
@@ -152,30 +152,30 @@
   {
     "id": 16,
     "nombre": "Event",
-    "tipo": "Zapatilas",
+    "tipo": "zapatillas",
     "cantidad": 1,
     "desc": "Zapatillas para la semana",
-    "precio": 777,
+    "precio": 4900,
     "talle": "40",
     "img": "../assets/z4.jpg"
   },
   {
     "id": 17,
     "nombre": "Mexico",
-    "tipo": "Zapatilas",
+    "tipo": "zapatillas",
     "cantidad": 1,
     "desc": "Zapatillas para la semana",
-    "precio": 234,
+    "precio": 6000,
     "talle": "40",
     "img": "../assets/z5.jpg"
   },
   {
     "id": 18,
     "nombre": "Seul",
-    "tipo": "Zapatilas",
+    "tipo": "zapatillas",
     "cantidad": 1,
     "desc": "Zapatillas para la semana",
-    "precio": 1600,
+    "precio": 5000,
     "talle": "40",
     "img": "../assets/z6.jpg"
   }

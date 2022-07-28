@@ -6,6 +6,7 @@ const contenedorCarrito = document.getElementById('carrito-contenedor');
 const comprarBtn = document.getElementById('comprar')
 
 const precioTotal = document.getElementById('totalCompra');
+const vaciar = document.getElementById('vaciarCarrito')
 
 const buscador = document.getElementById('buscador')
 const inputNombre = document.querySelector("#inputNombre")
