@@ -33,7 +33,7 @@
                 <form action="#" class="color-formulario z-depth-2" id="formulario">
                     <p>Ingrese sus datos para enviarle la compra:</p>
                     <input type="text" id="inputNombre" placeholder="Ingrese su nombre">
-                    <input type="tel" id="inputTelefono" maxlength="10"  placeholder="Su teléfono móvil">
+                    <input type="tel" id="inputTelefono" pattern="[0-9]{10}" placeholder="Su teléfono móvil (10 dígitos)">
                     <input type="email" id="inputEmail" placeholder="Correo electrónico">
                     <input type="submit" class="btn orange white-text" id="submit" value="ENVIAR">
                 </form>

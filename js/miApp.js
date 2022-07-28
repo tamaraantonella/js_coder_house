@@ -154,7 +154,7 @@ function filtrarProd(id){
             mostrarproductos()
         }
         const filtrarproductos = data.filter((prod) => prod.talle === id)
-        console.log(filtrarproductos)
+
         filtrarproductos.forEach(producto => {
             //Renderizando card
             const div = document.createElement('div')
@@ -206,3 +206,6 @@ function recuperoDatosCarrito() {
     }
 }
 recuperoDatosCarrito()
+
+//click en comprar, vacía el carrito
+// comprarBtn.addEventListener('click', ()=> localStorage.clear())

@@ -1,4 +1,4 @@
-let carritoDeCompras = []
+var carritoDeCompras = []
 
 const contenedorProductos = document.getElementById('contenedor-productos'); //donde van a cargarse los elementos cuando aparezcan
 
@@ -16,7 +16,7 @@ const btnSubmit = document.querySelector("#submit")
 
 const formulario = document.getElementById('formulario')
 
-let datosDeInput = "";
+
 
 const URL = `../js/stock.json`;
 

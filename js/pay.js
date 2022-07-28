@@ -17,7 +17,6 @@ function recuperoDatosUser() {
         inputEmail.value = datosUser.email
     }
 }
-recuperoDatosUser()
 
 //validar form
 const enviarForm = () => {
@@ -33,24 +32,39 @@ const enviarForm = () => {
             icon: 'error',
             confirmButtonText: 'OK'})
     }
-    if(error.length===0) alertForm('Formulario enviado')
+    if (error.length === 0) alertForm('¿Finalizar compra?')
 }
 
+//submit del formulario
 formulario.addEventListener("submit", (e) => {
     e.preventDefault()
     guardarDatosDeUser(),
     enviarForm() ;
 })
 
+//alert del form
 const alertForm = (mensaje) => {
     Swal.fire({
         title: mensaje,
-        text: 'Gracias por su compra ' + inputNombre.value.toUpperCase() + ' 😊',
-        icon: 'success',
-        confirmButtonText: 'OK',
-        closeOnConfirm: false
-    }).then(result => result ? localStorage.removeItem('datosUser'): null)
+        text: 'Hola '+ inputNombre.value.toUpperCase() + ' 😊 ' + 'te enviaremos los datos de tu compra a '+  inputEmail.value,
+        icon: 'question',
+        confirmButtonText: 'Finalizar compra',
+        showCancelButton: true,
+        cancelButtonText: "Volver"
+    })
+    .then(result => {
+        if (result.isConfirmed) {
+            localStorage.removeItem('datosUser')
+            localStorage.removeItem('carrito')
+            Swal.fire({
+                title: 'Gracias por tu compra!',
+                text: 'Esperamos que vuelvas pronto 😊',
+                icon: 'success',
+                confirmButtonText: 'OK',
+            })
+            .then((result) => result ? window.location.href = "../index.html" : null)
+    }
+    })
 }
 
-
-
+recuperoDatosUser()
