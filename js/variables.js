@@ -13,6 +13,8 @@ const inputTel = document.querySelector("#inputTelefono")
 const inputEmail = document.querySelector("#inputEmail")
 const btnSubmit = document.querySelector("#submit")
 
+const formulario = document.getElementById('formulario')
+
 let datosDeInput = "";
 
 const URL = `../js/stock.json`;

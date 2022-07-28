@@ -9,11 +9,7 @@ function guardarDatosDeUser() {
 
 }
 
-document.addEventListener("submit", (e) => {
-    e.preventDefault()
-    guardarDatosDeUser()
-    alertForm('Formulario enviado')
-})
+
 
 const alertForm = (mensaje) => {
     Swal.fire({
@@ -32,3 +28,31 @@ function recuperoDatosUser() {
     }
 }
 recuperoDatosUser()
+
+
+
+formulario.addEventListener("submit", (e) => {
+    e.preventDefault()
+    guardarDatosDeUser(),
+    enviarForm() ;
+})
+
+//validar form
+const enviarForm = () => {
+    var error =[]
+    if (inputNombre.value === null || inputNombre.value === "") {
+        error.push('Ingresa tu nombre')
+    }
+    if (inputTel.value === null || inputTel.value === "") {
+        error.push('Ingresa tu telefono')
+    }
+    let text = error.join(', ')
+    if (error.length > 0) {
+        Swal.fire({
+            title: 'Faltan Datos!',
+            text: text,
+            icon: 'error',
+            confirmButtonText: 'OK'})
+    }
+    if(error.length===0) alertForm('Formulario enviado')
+}

@@ -61,7 +61,6 @@ const agregarAlCarrito = (prodId) => {
         const prod = carritoDeCompras.map (prod =>{
             if (prod.id === prodId){
                 prod.cantidad++
-                prod.precio = prod.precio*prod.cantidad
             }
             actualizarCarrito()
         })
@@ -79,14 +78,25 @@ const agregarAlCarrito = (prodId) => {
 
 //Eliminar producto
 function eliminarDelCarrito(prodID) {
-
-    const confirma = confirm('Desea eliminar el producto?')
-    if (confirma) {
-        const item = carritoDeCompras.find((prod) => prod.id === prodID)
-        const indice = carritoDeCompras.indexOf(item)
+    const item = carritoDeCompras.find((prod) => prod.id === prodID)
+    const indice = carritoDeCompras.indexOf(item)
+    debugger
+    if (carritoDeCompras[indice].cantidad === 1) {
         carritoDeCompras.splice(indice, 1)
         actualizarCarrito()
+        Swal.fire({
+            icon: 'info',
+            title: 'Producto Eliminado!',
+        })
+    } else {
+        carritoDeCompras[indice].cantidad -= 1
+        actualizarCarrito()
+        Swal.fire({
+            icon: 'info',
+            title: 'Producto Eliminado!',
+        })
     }
+
 
 }
 
@@ -101,12 +111,12 @@ const actualizarCarrito = () => {
         `
         <p class="px-3"><span id= "cantidad">${prod.cantidad}</span></p>
         <p class="px-3">${prod.nombre}</p>
-        <p>$${prod.precio}</p>
+        <p>$${prod.precio*prod.cantidad}</p>
         <span onClick = (eliminarDelCarrito(${div.id})) class="px-3" role='button'><i class="fa-solid fa-trash"></i><span>
         `
         contenedorCarrito.appendChild(div)
     })
-    let total= carritoDeCompras.reduce((acc, prod)=> acc + prod.precio, 0)
+    let total= carritoDeCompras.reduce((acc, prod)=> acc + prod.precio*prod.cantidad, 0)
     precioTotal.innerText = `Total $${total}`
     comprarBtn.className='btn btn-primary'
     avisoVacio()
