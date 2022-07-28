@@ -23,12 +23,12 @@ recuperoDatosUser()
 const enviarForm = () => {
     var error =[]
     if (inputNombre.value === null || inputNombre.value === "") error.push('Ingresa tu nombre')
-    if (inputTel.value === null || inputTel.value === "") error.push('Ingresa tu teléfono')
+    if (inputTel.value === null || inputTel.value === "" || inputTel.value.length < 9) error.push('Ingresa tu teléfono')
     if(inputEmail.value === null || inputEmail.value === "") error.push('Ingresa tu mail')
     let text = error.join(', ')
     if (error.length > 0) {
         Swal.fire({
-            title: 'Faltan Datos!',
+            title: 'Faltan Datos',
             text: text,
             icon: 'error',
             confirmButtonText: 'OK'})
