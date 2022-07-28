@@ -68,6 +68,7 @@ const agregarAlCarrito = (prodId) => {
                 const item = data.find((prod) => prod.id == prodId)
                 carritoDeCompras.push(item)
                 actualizarCarrito()
+                guardarCarrito()
             })
     }
 }
@@ -76,7 +77,6 @@ const agregarAlCarrito = (prodId) => {
 function eliminarDelCarrito(prodID) {
     const item = carritoDeCompras.find((prod) => prod.id === prodID)
     const indice = carritoDeCompras.indexOf(item)
-    debugger
     if (carritoDeCompras[indice].cantidad === 1) {
         carritoDeCompras.splice(indice, 1)
         actualizarCarrito()
@@ -124,7 +124,9 @@ const actualizarCarrito = () => {
     precioTotal.innerText = `Total $${total}`
     comprarBtn.className = 'btn btn-primary'
     vaciar.className = 'btn btn-secondary'
+    guardarCarrito()
     avisoVacio()
+
 }
 
 //Botones de filtro por talle
@@ -186,3 +188,21 @@ function filtrarProd(id){
         })
     })
 }
+//guardo carrito
+const guardarCarrito = () => {
+    if (carritoDeCompras.length > 0) {
+        localStorage.setItem('carrito', JSON.stringify(carritoDeCompras))
+    } else {
+        localStorage.clear()
+    }
+}
+//recuperando datos de carrito
+function recuperoDatosCarrito() {
+    if (miCarrito = JSON.parse(localStorage.getItem('carrito'))) {
+        miCarrito.forEach(prod => {
+            carritoDeCompras.push(prod)
+        })
+        actualizarCarrito()
+    }
+}
+recuperoDatosCarrito()

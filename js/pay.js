@@ -36,17 +36,21 @@ const enviarForm = () => {
     if(error.length===0) alertForm('Formulario enviado')
 }
 
-const alertForm = (mensaje) => {
-    Swal.fire({
-        title: mensaje,
-        text: 'Gracias por su compra.',
-        icon: 'success',
-        confirmButtonText: 'OK'})
-}
-
 formulario.addEventListener("submit", (e) => {
     e.preventDefault()
     guardarDatosDeUser(),
     enviarForm() ;
 })
+
+const alertForm = (mensaje) => {
+    Swal.fire({
+        title: mensaje,
+        text: 'Gracias por su compra ' + inputNombre.value.toUpperCase() + ' 😊',
+        icon: 'success',
+        confirmButtonText: 'OK',
+        closeOnConfirm: false
+    }).then(result => result ? localStorage.removeItem('datosUser'): null)
+}
+
+
 
